@@ -108,7 +108,7 @@ const ExportPage = () => {
                                                         )}
                                                     </td>
                                                     <td>
-                                                        <QRCodeWithPrintButton value={`http://localhost:300/scanned/${_export.id}`} />
+                                                        <QRCodeWithPrintButton value={`https://qr-demo-one.vercel.app/scanned/${_export.id}`} />
                                                     </td> 
                                                 </tr>
                                             ))
