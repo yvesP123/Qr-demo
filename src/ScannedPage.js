@@ -189,11 +189,13 @@ const ScannedPage = () => {
                   subHeaders[i].includes('Image') ||
                   subHeaders[i].includes('Photo') ||
                   subHeaders[i].includes('Pictures') ? (
-                  <img
-                    alt=''
-                    src={`https://lh3.googleusercontent.com/d/${value}=w2160?authuser=0`}
-                    style={{ maxWidth: '100%', height: 'auto' }}
-                  />
+                  // <img
+                  //   alt=''
+                  //   src={`https://lh3.googleusercontent.com/d/${value}=w2160?authuser=0`}
+                  //   style={{ maxWidth: '100%', height: 'auto' }}
+                  // />
+                  <div></div>
+
                 ) : (
                   <p className='text-light'>{value}</p>
                 )}
@@ -296,7 +298,7 @@ const ScannedPage = () => {
                           <div className="accordion-body">
                             <div className='row'>
                               <div className='col-lg-6'>
-                                <img src={export_?.picture ? `https://lh3.googleusercontent.com/d/${export_?.picture}=w2160?authuser=0` : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx4xrkRCeiKCPwkflbkXd11W_2fzx34RemdWXmv8TXYWLT2SGtLfkqFCyBb_CBoNcNVBc&usqp=CAU'} alt='' width='100%' height={600} style={{ objectFit: 'cover' }} className='rounded'/>
+                                {/* <img src={export_?.picture ? `https://lh3.googleusercontent.com/d/${export_?.picture}=w2160?authuser=0` : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx4xrkRCeiKCPwkflbkXd11W_2fzx34RemdWXmv8TXYWLT2SGtLfkqFCyBb_CBoNcNVBc&usqp=CAU'} alt='' width='100%' height={600} style={{ objectFit: 'cover' }} className='rounded'/> */}
                               </div>
                               <div className='col-lg-6'>
                                 { export_?.exportationID &&
@@ -473,13 +475,13 @@ const ScannedPage = () => {
                             <div className="accordion-body">
                               {uploads[i] ? (
                                 <>
-                                  <iframe 
+                                  {/* <iframe 
                                     title={item} 
                                     src={`https://drive.google.com/file/d/${uploads[i]}/preview`} 
                                     width="100%" 
                                     height="500" 
                                     allow="autoplay"
-                                  ></iframe>
+                                  ></iframe> */}
                                   <div className="mt-3">
                                     <a 
                                       target='_blank' 
@@ -605,13 +607,13 @@ const ScannedPage = () => {
                                   <h4 className="text-light mb-2 mt-4">Percentage Owned:{document.percent}%</h4>
                                   <h4 className='text-light mb-2 mt-4'>Nationality:{document.nationality}</h4>
                                   <h4 className='text-light mb-2 mt-4'>Address:{document.address}</h4>
-                                  <iframe 
+                                  {/* <iframe 
                                     title={document} 
                                     src={`https://drive.google.com/file/d/${document.nationalID}/preview`} 
                                     width="100%" 
                                     height="500" 
                                     allow="autoplay"
-                                  ></iframe> 
+                                  ></iframe>  */}
 
                       
                                   </>
@@ -640,13 +642,13 @@ const ScannedPage = () => {
                                   <h4 className="text-light mb-2 mt-4">Percentage Owned:{owner.percent}%</h4>
                                   <h4 className='text-light mb-2 mt-4'>Nationality:{owner.nationality}</h4>
                                   <h4 className='text-light mb-2 mt-4'>Address:{owner.address}</h4>
-                                  <iframe 
+                                  {/* <iframe 
                                     title={owner} 
                                     src={`https://drive.google.com/file/d/${owner.nationalID}/preview`} 
                                     width="100%" 
                                     height="500" 
                                     allow="autoplay"
-                                  ></iframe> 
+                                  ></iframe>  */}
 
                       
                                   </>
@@ -780,13 +782,13 @@ const ScannedPage = () => {
                                   <h4 className="text-light mb-2 mt-4">Percentage Owned:{document.percent}%</h4>
                                   <h4 className='text-light mb-2 mt-4'>Nationality:{document.nationality}</h4>
                                   <h4 className='text-light mb-2 mt-4'>Address:{document.address}</h4>
-                                  <iframe 
+                                  {/* <iframe 
                                     title={document} 
                                     src={`https://drive.google.com/file/d/${document.nationalID}/preview`} 
                                     width="100%" 
                                     height="500" 
                                     allow="autoplay"
-                                  ></iframe> 
+                                  ></iframe>  */}
 
                       
                                   </>
@@ -815,13 +817,13 @@ const ScannedPage = () => {
                                   <h4 className="text-light mb-2 mt-4">Percentage Owned:{owner.percent}%</h4>
                                   <h4 className='text-light mb-2 mt-4'>Nationality:{owner.nationality}</h4>
                                   <h4 className='text-light mb-2 mt-4'>Address:{owner.address}</h4>
-                                  <iframe 
+                                  {/* <iframe 
                                     title={owner} 
                                     src={`https://drive.google.com/file/d/${owner.nationalID}/preview`} 
                                     width="100%" 
                                     height="500" 
                                     allow="autoplay"
-                                  ></iframe> 
+                                  ></iframe>  */}
 
                       
                                   </>
@@ -876,13 +878,7 @@ const ScannedPage = () => {
                                   <h4 className="text-light mb-2 mt-4">Percentage Owned:{owner.percent}%</h4>
                                   <h4 className='text-light mb-2 mt-4'>Nationality:{owner.nationality}</h4>
                                   <h4 className='text-light mb-2 mt-4'>Address:{owner.address}</h4>
-                                  <iframe 
-                                    title={owner} 
-                                    src={`https://drive.google.com/file/d/${owner.nationalID}/preview`} 
-                                    width="100%" 
-                                    height="500" 
-                                    allow="autoplay"
-                                  ></iframe> 
+                                 
 
                       
                                   </>
