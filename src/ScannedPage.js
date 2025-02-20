@@ -49,18 +49,18 @@ const ScannedPage = () => {
   });
 
   const [companyDocs, setCompanyDocs] = useState([
-    { type: 'License', file: '/assets/B2401041602527HX3.pdf' },
-    { type: 'Certificate', file: '/assets/B2401041602527HX3.pdf' }
+    { type: 'License', file: '/assets/Demo QR Code.jpg' },
+    { type: 'Certificate', file: '/assets/Demo QR Code.jpg' }
   ]);
 
   const [shareholder, setShareholder] = useState([
-    { name: 'Shareholder 1', percent: 30, nationality: 'Rwandan', address: '123 Shareholder St', nationalID: '/assets/B2401041602527HX3.pdf' },
-    { name: 'Shareholder 2', percent: 70, nationality: 'Kenyan', address: '456 Shareholder St', nationalID: '/assets/B2401041602527HX3.pdf' }
+    { name: 'Shareholder 1', percent: 30, nationality: 'Rwandan', address: '123 Shareholder St', nationalID: '/assets/Demo QR Code.jpg' },
+    { name: 'Shareholder 2', percent: 70, nationality: 'Kenyan', address: '456 Shareholder St', nationalID: '/assets/Demo QR Code.jpg' }
   ]);
 
   const [beneficial, setBeneficial] = useState([
-    { name: 'Beneficial Owner 1', percent: 20, nationality: 'Ugandan', address: '789 Beneficial St', nationalID: '/assets/B2401041602527HX3.pdf' },
-    { name: 'Beneficial Owner 2', percent: 80, nationality: 'Tanzanian', address: '101 Beneficial St', nationalID: '/assets/B2401041602527HX3.pdf' }
+    { name: 'Beneficial Owner 1', percent: 20, nationality: 'Ugandan', address: '789 Beneficial St', nationalID: '/assets/Demo QR Code.jpg' },
+    { name: 'Beneficial Owner 2', percent: 80, nationality: 'Tanzanian', address: '101 Beneficial St', nationalID: '/assets/Demo QR Code.jpg' }
   ]);
 
   const [companymine, setCompanyMine] = useState({
@@ -72,18 +72,18 @@ const ScannedPage = () => {
   });
 
   const [companydocmine, setCompanyDocMine] = useState([
-    { type: 'Mine License', file: '/assets/B2401041602527HX3.pdf' },
-    { type: 'Mine Certificate', file: '/assets/B2401041602527HX3.pdf' }
+    { type: 'Mine License', file: '/assets/Demo QR Code.jpg' },
+    { type: 'Mine Certificate', file: '/assets/Demo QR Code.jpg' }
   ]);
 
   const [compamnyshareholdermine, setCompanyShareholderMine] = useState([
-    { name: 'Mine Shareholder 1', percent: 40, nationality: 'Rwandan', address: '123 Mine Shareholder St', nationalID: '/assets/B2401041602527HX3.pdf' },
-    { name: 'Mine Shareholder 2', percent: 60, nationality: 'Kenyan', address: '456 Mine Shareholder St', nationalID: '/assets/B2401041602527HX3.pdf' }
+    { name: 'Mine Shareholder 1', percent: 40, nationality: 'Rwandan', address: '123 Mine Shareholder St', nationalID: '/assets/Demo QR Code.jpg' },
+    { name: 'Mine Shareholder 2', percent: 60, nationality: 'Kenyan', address: '456 Mine Shareholder St', nationalID: '/assets/Demo QR Code.jpg' }
   ]);
 
   const [companybeneficialmine, setCompanyBeneficialMine] = useState([
-    { name: 'Mine Beneficial Owner 1', percent: 25, nationality: 'Ugandan', address: '789 Mine Beneficial St', nationalID: '/assets/B2401041602527HX3.pdf' },
-    { name: 'Mine Beneficial Owner 2', percent: 75, nationality: 'Tanzanian', address: '101 Mine Beneficial St', nationalID: '/assets/B2401041602527HX3.pdf' }
+    { name: 'Mine Beneficial Owner 1', percent: 25, nationality: 'Ugandan', address: '789 Mine Beneficial St', nationalID: '/assets/Demo QR Code.jpg' },
+    { name: 'Mine Beneficial Owner 2', percent: 75, nationality: 'Tanzanian', address: '101 Mine Beneficial St', nationalID: '/assets/Demo QR Code.jpg' }
   ]);
 
   const [minesite, setMineSite] = useState('Dummy Mine Site');
