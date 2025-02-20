@@ -49,18 +49,18 @@ const ScannedPage = () => {
   });
 
   const [companyDocs, setCompanyDocs] = useState([
-    { type: 'License', file: 'dummy-file-id-1' },
-    { type: 'Certificate', file: 'dummy-file-id-2' }
+    { type: 'License', file: '/assets/B2401041602527HX3.pdf' },
+    { type: 'Certificate', file: '/assets/B2401041602527HX3.pdf' }
   ]);
 
   const [shareholder, setShareholder] = useState([
-    { name: 'Shareholder 1', percent: 30, nationality: 'Rwandan', address: '123 Shareholder St', nationalID: 'dummy-national-id-1' },
-    { name: 'Shareholder 2', percent: 70, nationality: 'Kenyan', address: '456 Shareholder St', nationalID: 'dummy-national-id-2' }
+    { name: 'Shareholder 1', percent: 30, nationality: 'Rwandan', address: '123 Shareholder St', nationalID: '/assets/B2401041602527HX3.pdf' },
+    { name: 'Shareholder 2', percent: 70, nationality: 'Kenyan', address: '456 Shareholder St', nationalID: '/assets/B2401041602527HX3.pdf' }
   ]);
 
   const [beneficial, setBeneficial] = useState([
-    { name: 'Beneficial Owner 1', percent: 20, nationality: 'Ugandan', address: '789 Beneficial St', nationalID: 'dummy-national-id-3' },
-    { name: 'Beneficial Owner 2', percent: 80, nationality: 'Tanzanian', address: '101 Beneficial St', nationalID: 'dummy-national-id-4' }
+    { name: 'Beneficial Owner 1', percent: 20, nationality: 'Ugandan', address: '789 Beneficial St', nationalID: '/assets/B2401041602527HX3.pdf' },
+    { name: 'Beneficial Owner 2', percent: 80, nationality: 'Tanzanian', address: '101 Beneficial St', nationalID: '/assets/B2401041602527HX3.pdf' }
   ]);
 
   const [companymine, setCompanyMine] = useState({
@@ -72,18 +72,18 @@ const ScannedPage = () => {
   });
 
   const [companydocmine, setCompanyDocMine] = useState([
-    { type: 'Mine License', file: 'dummy-mine-file-id-1' },
-    { type: 'Mine Certificate', file: 'dummy-mine-file-id-2' }
+    { type: 'Mine License', file: '/assets/B2401041602527HX3.pdf' },
+    { type: 'Mine Certificate', file: '/assets/B2401041602527HX3.pdf' }
   ]);
 
   const [compamnyshareholdermine, setCompanyShareholderMine] = useState([
-    { name: 'Mine Shareholder 1', percent: 40, nationality: 'Rwandan', address: '123 Mine Shareholder St', nationalID: 'dummy-mine-national-id-1' },
-    { name: 'Mine Shareholder 2', percent: 60, nationality: 'Kenyan', address: '456 Mine Shareholder St', nationalID: 'dummy-mine-national-id-2' }
+    { name: 'Mine Shareholder 1', percent: 40, nationality: 'Rwandan', address: '123 Mine Shareholder St', nationalID: '/assets/B2401041602527HX3.pdf' },
+    { name: 'Mine Shareholder 2', percent: 60, nationality: 'Kenyan', address: '456 Mine Shareholder St', nationalID: '/assets/B2401041602527HX3.pdf' }
   ]);
 
   const [companybeneficialmine, setCompanyBeneficialMine] = useState([
-    { name: 'Mine Beneficial Owner 1', percent: 25, nationality: 'Ugandan', address: '789 Mine Beneficial St', nationalID: 'dummy-mine-national-id-3' },
-    { name: 'Mine Beneficial Owner 2', percent: 75, nationality: 'Tanzanian', address: '101 Mine Beneficial St', nationalID: 'dummy-mine-national-id-4' }
+    { name: 'Mine Beneficial Owner 1', percent: 25, nationality: 'Ugandan', address: '789 Mine Beneficial St', nationalID: '/assets/B2401041602527HX3.pdf' },
+    { name: 'Mine Beneficial Owner 2', percent: 75, nationality: 'Tanzanian', address: '101 Mine Beneficial St', nationalID: '/assets/B2401041602527HX3.pdf' }
   ]);
 
   const [minesite, setMineSite] = useState('Dummy Mine Site');
@@ -189,12 +189,12 @@ const ScannedPage = () => {
                   subHeaders[i].includes('Image') ||
                   subHeaders[i].includes('Photo') ||
                   subHeaders[i].includes('Pictures') ? (
-                  // <img
-                  //   alt=''
-                  //   src={`https://lh3.googleusercontent.com/d/${value}=w2160?authuser=0`}
-                  //   style={{ maxWidth: '100%', height: 'auto' }}
-                  // />
-                  <div></div>
+                  <img
+                    alt=''
+                    src={`${value}`}
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                  />
+                  
 
                 ) : (
                   <p className='text-light'>{value}</p>
@@ -475,13 +475,13 @@ const ScannedPage = () => {
                             <div className="accordion-body">
                               {uploads[i] ? (
                                 <>
-                                  {/* <iframe 
+                                  <iframe 
                                     title={item} 
-                                    src={`https://drive.google.com/file/d/${uploads[i]}/preview`} 
+                                    src={`${uploads[i]}`} 
                                     width="100%" 
                                     height="500" 
-                                    allow="autoplay"
-                                  ></iframe> */}
+                                    
+                                  ></iframe>
                                   <div className="mt-3">
                                     <a 
                                       target='_blank' 
@@ -562,13 +562,13 @@ const ScannedPage = () => {
                                 {companyDocs.map((document, index) => (
                                   <ListGroup.Item key={index} className="d-flex justify-content-between align-items-center">
                                     <span className='accordion-body'>{document.type}</span>
-                                    {/* <iframe 
+                                    <iframe 
                                     title={document} 
-                                    src={`https://drive.google.com/file/d/${document.file}/preview`} 
+                                    src={document.file}
                                     width="100%" 
                                     height="500" 
                                     allow="autoplay"
-                                  ></iframe> */}
+                                  ></iframe>
                                   
                                   <div className="mt-3">
                                     <a 
@@ -607,13 +607,13 @@ const ScannedPage = () => {
                                   <h4 className="text-light mb-2 mt-4">Percentage Owned:{document.percent}%</h4>
                                   <h4 className='text-light mb-2 mt-4'>Nationality:{document.nationality}</h4>
                                   <h4 className='text-light mb-2 mt-4'>Address:{document.address}</h4>
-                                  {/* <iframe 
+                                  <iframe 
                                     title={document} 
-                                    src={`https://drive.google.com/file/d/${document.nationalID}/preview`} 
+                                    src={document.nationalID} 
                                     width="100%" 
                                     height="500" 
-                                    allow="autoplay"
-                                  ></iframe>  */}
+                                   
+                                  ></iframe> 
 
                       
                                   </>
@@ -642,13 +642,12 @@ const ScannedPage = () => {
                                   <h4 className="text-light mb-2 mt-4">Percentage Owned:{owner.percent}%</h4>
                                   <h4 className='text-light mb-2 mt-4'>Nationality:{owner.nationality}</h4>
                                   <h4 className='text-light mb-2 mt-4'>Address:{owner.address}</h4>
-                                  {/* <iframe 
+                                  <iframe 
                                     title={owner} 
-                                    src={`https://drive.google.com/file/d/${owner.nationalID}/preview`} 
+                                    src={owner.nationalID}
                                     width="100%" 
-                                    height="500" 
-                                    allow="autoplay"
-                                  ></iframe>  */}
+                                    height="500"  allow="autoplay"
+                                  ></iframe> 
 
                       
                                   </>
@@ -737,13 +736,13 @@ const ScannedPage = () => {
                                 {companydocmine.map((document, index) => (
                                   <ListGroup.Item key={index} className="d-flex justify-content-between align-items-center">
                                     <span className='accordion-body'>{document.type}</span>
-                                    {/* <iframe 
+                                    <iframe 
                                     title={document} 
-                                    src={`https://drive.google.com/file/d/${document.file}/preview`} 
+                                    src={document.file}
                                     width="100%" 
                                     height="500" 
-                                    allow="autoplay"
-                                  ></iframe> */}
+                                   
+                                  ></iframe>
                                   
                                   <div className="mt-3">
                                     <a 
@@ -782,13 +781,13 @@ const ScannedPage = () => {
                                   <h4 className="text-light mb-2 mt-4">Percentage Owned:{document.percent}%</h4>
                                   <h4 className='text-light mb-2 mt-4'>Nationality:{document.nationality}</h4>
                                   <h4 className='text-light mb-2 mt-4'>Address:{document.address}</h4>
-                                  {/* <iframe 
+                                  <iframe 
                                     title={document} 
-                                    src={`https://drive.google.com/file/d/${document.nationalID}/preview`} 
+                                    src={document.nationalID}
                                     width="100%" 
                                     height="500" 
                                     allow="autoplay"
-                                  ></iframe>  */}
+                                  ></iframe> 
 
                       
                                   </>
@@ -817,13 +816,13 @@ const ScannedPage = () => {
                                   <h4 className="text-light mb-2 mt-4">Percentage Owned:{owner.percent}%</h4>
                                   <h4 className='text-light mb-2 mt-4'>Nationality:{owner.nationality}</h4>
                                   <h4 className='text-light mb-2 mt-4'>Address:{owner.address}</h4>
-                                  {/* <iframe 
+                                  <iframe 
                                     title={owner} 
-                                    src={`https://drive.google.com/file/d/${owner.nationalID}/preview`} 
+                                    src={owner.nationalID} 
                                     width="100%" 
                                     height="500" 
-                                    allow="autoplay"
-                                  ></iframe>  */}
+                                   
+                                  ></iframe> 
 
                       
                                   </>
